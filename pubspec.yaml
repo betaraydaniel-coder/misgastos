@@ -1,0 +1,46 @@
+name: mis_gastos
+description: "Mis Gastos - registro personal de gastos con foto del ticket."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+  flutter: '>=3.27.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Manejo de estado
+  provider: ^6.1.2
+  # Persistencia local (clave-valor)
+  shared_preferences: ^2.3.2
+  # Función nativa: cámara y galería
+  image_picker: ^1.1.2
+  # Solicitud de permisos en tiempo de ejecución
+  permission_handler: ^11.3.1
+  # Carpeta privada de la app para guardar las fotos
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  # Consumo de API por HTTPS
+  http: ^1.2.2
+  # Formato de moneda
+  intl: ^0.20.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  # Genera el ícono personalizado del launcher
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+
+# Configuración del ícono personalizado (se genera con: dart run flutter_launcher_icons)
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#2E7D32"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  min_sdk_android: 21
